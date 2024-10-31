@@ -1,0 +1,27 @@
+{
+    "version": "2",
+    "templates": [
+      {
+        "type": "stack",
+        "title": "Pi-hole",
+        "description": "Template para desplegar Pi-hole con contraseña como parámetro",
+        "note": "Introduce una contraseña para la interfaz de Pi-hole.",
+        "categories": ["DNS", "Ad Blocker"],
+        "platform": "linux",
+        "logo": "https://docs.pi-hole.net/logo.svg",
+        "repository": {
+          "url": "https://github.com/pi-hole/docker-pi-hole"
+        },
+        "env": [
+          {
+            "name": "WEBPASSWORD",
+            "label": "Contraseña de Pi-hole",
+            "description": "Define una contraseña para el acceso a la interfaz web de Pi-hole.",
+            "default": "pihole_password"
+          }
+        ],
+        "stackfile": "docker-compose.yml"
+      }
+    ]
+  }
+  

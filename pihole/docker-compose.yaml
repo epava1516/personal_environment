@@ -8,8 +8,8 @@ services:
       - "53:53/udp"
       - "80:80/tcp"
     environment:
-      TZ: 'Europe/Madrid'  # Ajusta según tu zona horaria
-      WEBPASSWORD: 'tu_contraseña_segura'  # Establece una contraseña segura para la interfaz web
+      TZ: 'Europe/Madrid'
+      WEBPASSWORD: ${WEBPASSWORD}  # Parámetro como variable de entorno
     volumes:
       - pihole_data:/etc/pihole
       - dnsmasq_data:/etc/dnsmasq.d
